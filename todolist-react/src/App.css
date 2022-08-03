@@ -11,6 +11,8 @@
   margin: 50px auto;
   padding: 24px;
   background-color: #fefefe;
+  border: solid 1px lightgrey;
+  border-radius: 10px;
 }
 
 .new_task_inputs {
