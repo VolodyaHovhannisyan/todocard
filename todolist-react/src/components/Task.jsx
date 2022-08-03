@@ -7,6 +7,7 @@ const Task = ({ todo }) => {
                 className={
                     todo.completed ? 'completed_checkbox' : ''
                 }
+                onChange={() => {}}
                 type="checkbox" checked={todo.completed} name="" id="" />
                 <p className={
                     todo.completed ? 'completed_task' : ''
