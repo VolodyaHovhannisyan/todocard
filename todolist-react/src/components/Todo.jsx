@@ -10,8 +10,6 @@ const Todo = () => {
 
     const filteredTodos = todos.filter(todo => todo.date === date)
 
-    console.log(date);
-
     return (
         <>
             <div className="container">

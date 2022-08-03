@@ -26,7 +26,7 @@ const Tasks = () => {
             id: Math.floor(Math.random() * 106464600),
             task,
             date,
-            completed: true
+            completed: false
         }
 
         if (task !== '' && date !== '') {
