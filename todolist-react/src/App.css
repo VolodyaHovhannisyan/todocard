@@ -10,11 +10,16 @@
   width: 662px;
   margin: 50px auto;
   padding: 24px;
-  background-color: rgb(226, 216, 218);
+  background-color: #fefefe;
 }
 
 .new_task_inputs {
   padding: 0 15px;
+}
+
+.link {
+  text-decoration: none;
+  
 }
 
 .taskform {
@@ -41,6 +46,7 @@
   background: #3A85F7;
   border-radius: 8px;
   border: none;
+  cursor: pointer;
 }
 
 .task_par {
@@ -50,7 +56,7 @@
 .dates_list {
   height: 224px;
   width: 614px;
-  background-color: rgb(221, 197, 197);
+  background-color: #fefefe;
   padding: 16px;
 }
 
@@ -81,6 +87,37 @@
 .task {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 15px;
 }
 
+.check {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.edit-btn {
+  border: none;
+  background-color: transparent;
+  color: #3A85F7;
+}
+.delete-btn {
+  border: none;
+  background-color: transparent;
+  color: red;
+}
+.completed_task {
+  color: lightgray;
+  text-decoration: line-through;
+}
+.completed_checkbox {
+  color: lightgray;
+  background-color: rgb(32, 234, 32);
+}

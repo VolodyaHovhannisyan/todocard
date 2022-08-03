@@ -7,7 +7,14 @@ const Tasks = () => {
     const [task, setTask] = useState('')
     const [date, setDate] = useState('')
 
-    const [todos, setTodos] = useState([])
+    const [todos, setTodos] = useState([
+        {id: 10503580, task: "Go Gym", date: "2022-08-20", completed: true},
+        {id: 10503580, task: "Pay bills", date: "2022-08-21", completed: false},
+        {id: 10503580, task: "Go theatre", date: "2022-08-21", completed: true},
+        {id: 10503580, task: "Go museum", date: "2022-08-25", completed: true},
+        {id: 10503580, task: "Go market", date: "2022-08-25", completed: true},
+        {id: 10503580, task: "Go service", date: "2022-08-25", completed: false},
+    ])
 
     const [todosDatesList, setTodosDatesList] = useState([])
 
@@ -19,7 +26,7 @@ const Tasks = () => {
             id: Math.floor(Math.random() * 106464600),
             task,
             date,
-            completed: false
+            completed: true
         }
 
         if (task !== '' && date !== '') {

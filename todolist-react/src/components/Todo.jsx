@@ -16,8 +16,8 @@ const Todo = () => {
         <>
             <div className="container">
                 <div className="head">
-                    <div>
-                        <Link to={'/'}>Go back</Link>
+                    <div >
+                        <Link className='link' to={'/'}>Go back</Link>
                     </div>
                     <div>
                         <h1>{date} ({filteredTodos.length})</h1>
