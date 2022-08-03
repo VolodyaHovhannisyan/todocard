@@ -1,0 +1,151 @@
+@import url('http://fonts.cdnfonts.com/css/roboto');
+
+html {
+    /* Just for eye comfort :) */
+    background-color: #E5E5E5;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', 'sans-serif';
+}
+
+.card {
+  height: 413px;
+  width: 367px;
+  background-color: #fff;
+  margin: 25vh auto;
+  border-radius: 10px;
+}
+
+.header {
+  width: 367px;
+  height: 179px;
+  background: red;
+  border-radius: 10px 10px 0 0;
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0) 70.26%,
+      rgba(0, 0, 0, 0.43) 100%
+    ),
+    url('./assets/bg.png');
+  display: flex;
+}
+
+.logo {
+  height: 52px;
+  width: 52px;
+  background: url('./assets/avatar1.png');
+  background-position-x: center;
+  background-position-y: center;
+  border: solid 1px white;
+  border-radius: 50%;
+  position: relative;
+  top: 12px;
+  left: 12px;
+}
+
+.views {
+  color: #ffffff;
+  justify-content: space-between;
+  position: relative;
+  height: 20px;
+  left: 160px;
+  right: 12px;
+  top: 12px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+}
+.details {
+  margin: 16px;
+}
+
+.details_heading {
+  height: 52px;
+  left: 16px;
+  right: 16px;
+  bottom: 166px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 26px;
+  color: #212121;
+}
+
+.details > .caption_par {
+  width: 248px;
+  height: 20px;
+  left: 44px;
+  bottom: 130px;
+  margin: 20px 0;
+
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  word-spacing: 1.5px;
+
+  color: #212121;
+}
+.progress {
+  display: flex;
+}
+
+.prog-title {
+  color: #9c9c9c;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+}
+.prog-percentage {
+  color: #4ce77b;
+  text-indent: 2px;
+  font-size: 14px;
+  line-height: 20px;
+}
+.progressbar {
+  height: 12px;
+  left: 16px;
+  right: 16px;
+  bottom: 76px;
+
+  background: #f0f0f0;
+  border-radius: 100px;
+}
+.progress-level {
+  height: 12px;
+  width: 227px;
+  left: 16px;
+  right: 124px;
+  bottom: 76px;
+  margin: 2px 0;  
+  background: linear-gradient(90deg, #4ce77b 0%, #73f49a 100%);
+  border-radius: 100px;
+}
+
+.socials {
+    display: flex;
+    justify-content: space-between;
+}
+.more {
+    position: relative;
+    top: 35px;
+    left: 10px;
+    font-size: 18px;
+}
+
+.icons {
+    display: flex;
+    height: 20px;
+    width: 50px;
+    position: relative;
+    top: 35px;
+    right: 30px;
+    gap: 30px;
+
+}

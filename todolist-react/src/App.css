@@ -1,0 +1,86 @@
+@import url('http://fonts.cdnfonts.com/css/open-sans');
+
+* {
+  font-family: 'Open Sans', sans-serif;
+
+}
+
+.container {
+  height: 448px;
+  width: 662px;
+  margin: 50px auto;
+  padding: 24px;
+  background-color: rgb(226, 216, 218);
+}
+
+.new_task_inputs {
+  padding: 0 15px;
+}
+
+.taskform {
+  height: 70px;
+  width: 614px;
+  display: flex;
+  /* align-items: center; */
+  padding: 0 15px;
+  gap: 8px;
+}
+
+.taskform input {
+  border: none;
+  color: gray;
+  height: 48px;
+  width: 60vw;
+  border-radius: 8px;
+}
+
+.btn {
+  width: 88px;
+  height: 48px;
+  color: #fff;
+  background: #3A85F7;
+  border-radius: 8px;
+  border: none;
+}
+
+.task_par {
+  font-weight: bold;
+}
+
+.dates_list {
+  height: 224px;
+  width: 614px;
+  background-color: rgb(221, 197, 197);
+  padding: 16px;
+}
+
+.todos_dates {
+  padding: 0 15px;
+}
+
+.todoDate {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.dateobj {
+  color: #3A85F7;
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.todoList {
+  
+}
+
+.task {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
