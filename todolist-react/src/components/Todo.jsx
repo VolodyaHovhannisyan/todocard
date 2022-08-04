@@ -9,8 +9,6 @@ const Todo = () => {
     const { date } = useParams()
     const { todoList} = useContext(TodoContext)
 
-    const todos = JSON.parse(localStorage.getItem('todos'))
-
     const filteredTodos = todoList.filter(todo => todo.date === date)
 
     return (

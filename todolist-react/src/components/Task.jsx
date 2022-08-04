@@ -21,13 +21,16 @@ const Task = ({ todo }) => {
 
         console.log(todoList);
 
-   }
+    }
 
-//    useEffect(() => {
-//     console.log(todoList);
-    
-//    }, [todoList])
-   
+    const onDelete = (task) => {
+        const filteredTodos = todoList.filter(todo => todo.id !== task.id)
+
+        setTodoList(filteredTodos)
+
+    }
+
+
     return (
         <div className="task">
             <div className="check">
@@ -43,7 +46,7 @@ const Task = ({ todo }) => {
             </div>
             <div className="buttons">
                 <button className='edit-btn' type="submit">Edit</button>
-                <button className='delete-btn' type="submit">Delete</button>
+                <button onClick={() => onDelete(todo)} className='delete-btn' type="submit">Delete</button>
             </div>
         </div>
     )
