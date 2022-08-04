@@ -44,7 +44,7 @@
 
 .btn {
   width: 20vw;
-  height: 48px;
+  height: 40px;
   color: #fff;
   background: #3A85F7;
   border-radius: 8px;
@@ -137,9 +137,9 @@
   justify-content: space-between;
 }
 
-input[type="text"] {
+input[type="text"] , input[type="date"] {
   background-color: rgb(228, 224, 224);
-  height: 35px;
+  height: 40px;
   width: 80%;
   padding-left: 10px;
   border: none;
