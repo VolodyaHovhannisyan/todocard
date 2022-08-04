@@ -60,6 +60,8 @@ const Tasks = () => {
     useEffect(() => {
 
         localStorage.setItem('todos', JSON.stringify(todos))
+        setTodoList(todos)
+
 
     }, [todos])
 
