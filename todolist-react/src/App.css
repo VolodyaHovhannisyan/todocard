@@ -123,3 +123,6 @@
   color: lightgray;
   background-color: rgb(32, 234, 32);
 }
+/* input[type="checkbox"]:checked::after {
+  background-color: red;
+} */

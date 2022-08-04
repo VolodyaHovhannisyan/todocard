@@ -1,5 +1,6 @@
-import React, { useEffect } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { useState } from 'react'
+import { TodoContext } from '../App'
 import TodoDates from './TodoDates'
 
 
@@ -7,14 +8,9 @@ const Tasks = () => {
     const [task, setTask] = useState('')
     const [date, setDate] = useState('')
 
-    const [todos, setTodos] = useState([
-        {id: 46544, task: "Go Gym", date: "2022-08-20", completed: true},
-        {id: 8954645, task: "Pay bills", date: "2022-08-21", completed: false},
-        {id: 9848, task: "Go theatre", date: "2022-08-21", completed: true},
-        {id: 11121, task: "Go museum", date: "2022-08-25", completed: true},
-        {id: 455454, task: "Go market", date: "2022-08-25", completed: true},
-        {id: 98978744, task: "Go service", date: "2022-08-25", completed: false},
-    ])
+    const {todoList, setTodoList} = useContext(TodoContext)
+
+    const [todos, setTodos] = useState(todoList)
 
     const [todosDatesList, setTodosDatesList] = useState([])
 
@@ -62,8 +58,12 @@ const Tasks = () => {
 
 
     useEffect(() => {
+
         localStorage.setItem('todos', JSON.stringify(todos))
+
     }, [todos])
+
+
 
     return (
         <div className='container'>

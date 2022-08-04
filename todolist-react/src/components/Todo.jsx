@@ -1,14 +1,17 @@
+import { useContext } from 'react'
 import { useParams, Link } from 'react-router-dom'
+import { TodoContext } from '../App'
 import Task from './Task'
 
 
 const Todo = () => {
 
     const { date } = useParams()
+    const { todoList} = useContext(TodoContext)
 
     const todos = JSON.parse(localStorage.getItem('todos'))
 
-    const filteredTodos = todos.filter(todo => todo.date === date)
+    const filteredTodos = todoList.filter(todo => todo.date === date)
 
     return (
         <>
