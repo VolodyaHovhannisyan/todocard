@@ -22,7 +22,7 @@
 
 .link {
   text-decoration: none;
-  
+
 }
 
 .taskform {
@@ -111,19 +111,44 @@
   background-color: transparent;
   color: #3A85F7;
 }
+
 .delete-btn {
   border: none;
   background-color: transparent;
   color: red;
 }
+
 .completed_task {
   color: lightgray;
   text-decoration: line-through;
 }
+
 .completed_checkbox {
   color: lightgray;
   background-color: rgb(32, 234, 32);
 }
-/* input[type="checkbox"]:checked::after {
-  background-color: red;
-} */
+
+.input_edit {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+input[type="text"] {
+  background-color: rgb(228, 224, 224);
+  height: 35px;
+  width: 80%;
+  padding-left: 10px;
+  border: none;
+  border-radius: 3px;
+}
+
+.btn-edit {
+  background-color: #3A85F7;
+  color: #fefefe;
+  height: 40px;
+  width: 100px;
+  border: none;
+  border-radius: 5px;
+  margin-left:10px;
+}

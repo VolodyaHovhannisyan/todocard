@@ -1,9 +1,25 @@
-import { useContext } from "react"
+import { useContext, useState } from "react"
 import { TodoContext } from "../App"
+
+const EditTodo = ({ task }) => {
+
+    const [taskText, setTaskText] = useState(task.task)
+
+    return (
+        <div className="input_edit">
+            <input type="text" value={taskText} onChange={e => setTaskText(e.target.value)} />
+            <button className="btn-edit">Edit</button>
+        </div>
+    )
+}
+
 
 const Task = ({ todo }) => {
 
     const { todoList, setTodoList } = useContext(TodoContext)
+
+    const [updTodo, setUpdTodo] = useState('')
+    const [editTask, setEditTask] = useState(false)
 
     const onChange = (task) => {
 
@@ -31,23 +47,34 @@ const Task = ({ todo }) => {
 
 
     return (
-        <div className="task">
-            <div className="check">
-                <input
-                    className={
-                        todo.completed ? 'completed_checkbox' : ''
-                    }
-                    onChange={() => onChange(todo)}
-                    type="checkbox" checked={todo.completed} name="" id="" />
-                <p className={
-                    todo.completed ? 'completed_task' : ''
-                }>{todo.task}</p>
+        <>
+            <div className="task">
+                <div className="check">
+                    <input
+                        className={
+                            todo.completed ? 'completed_checkbox' : ''
+                        }
+                        onChange={() => onChange(todo)}
+                        type="checkbox" checked={todo.completed} name="" id="" />
+                    <p className={
+                        todo.completed ? 'completed_task' : ''
+                    }>{todo.task}</p>
+                </div>
+                <div className="buttons">
+                    <button onClick={() => {
+                        setUpdTodo(todo.task)
+                        setEditTask(prev => !prev)
+                    }} className='edit-btn'
+                        disabled={todo.completed}
+                        type="submit">{editTask ? 'Save' : 'Edit'}</button>
+                    <button onClick={() => onDelete(todo)} className='delete-btn' type="submit">Delete</button>
+                </div>
             </div>
-            <div className="buttons">
-                <button className='edit-btn' type="submit">Edit</button>
-                <button onClick={() => onDelete(todo)} className='delete-btn' type="submit">Delete</button>
-            </div>
-        </div>
+            {
+                editTask && <EditTodo task={todo} />
+            }
+        </>
+
     )
 }
 
