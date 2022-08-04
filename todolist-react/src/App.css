@@ -13,6 +13,7 @@
   background-color: #fefefe;
   border: solid 1px lightgrey;
   border-radius: 10px;
+  overflow: auto;
 }
 
 .new_task_inputs {
@@ -82,9 +83,9 @@
   gap: 30px;
 }
 
-.todoList {
+/* .todoList {
   
-}
+} */
 
 .task {
   display: flex;

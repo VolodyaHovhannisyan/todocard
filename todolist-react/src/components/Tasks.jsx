@@ -39,7 +39,7 @@ const Tasks = () => {
     useEffect(() => {
 
         const todosCount = todos.map(todo => todo.date)
-        const todoCount = (date) => todos.filter(todo => todo.date == date)
+        const todoCount = (date) => todos.filter(todo => todo.date === date)
 
         const setOfTodoDates = new Set(todosCount)
 
@@ -63,7 +63,7 @@ const Tasks = () => {
         setTodoList(todos)
 
 
-    }, [todos])
+    }, [todos, setTodoList])
 
 
 

@@ -1,25 +1,24 @@
-import { useEffect } from "react"
 import { useContext } from "react"
 import { TodoContext } from "../App"
 
 const Task = ({ todo }) => {
+
     const { todoList, setTodoList } = useContext(TodoContext)
 
     const onChange = (task) => {
 
         const todos = JSON.parse(localStorage.getItem('todos'))
-        const currentTodo = todos.filter(todo => todo.id === task.id)
-        const newTask = { ...task, completed: !task.completed }
+        // const currentTodo = todos.filter(todo => todo.id === task.id)
+        // const newTask = { ...task, completed: !task.completed }
 
         todos.map(todo => {
             if (todo.id === task.id) {
                 todo.completed = !todo.completed
             }
+            return ''
         })
 
         setTodoList(todos)
-
-        console.log(todoList);
 
     }
 
