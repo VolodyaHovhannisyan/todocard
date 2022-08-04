@@ -110,12 +110,15 @@
   border: none;
   background-color: transparent;
   color: #3A85F7;
+  cursor: pointer;
+
 }
 
 .delete-btn {
   border: none;
   background-color: transparent;
   color: red;
+  cursor: pointer;
 }
 
 .completed_task {
@@ -151,4 +154,5 @@ input[type="text"] {
   border: none;
   border-radius: 5px;
   margin-left:10px;
+  cursor: pointer;
 }

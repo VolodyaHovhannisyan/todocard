@@ -1,14 +1,34 @@
 import { useContext, useState } from "react"
 import { TodoContext } from "../App"
 
-const EditTodo = ({ task }) => {
+const EditTodo = ({ task, onEdit }) => {
 
     const [taskText, setTaskText] = useState(task.task)
+    const { todoList, setTodoList } = useContext(TodoContext)
+
+
+
+    const onClick = () => {
+        const todos = [...todoList]
+
+        todos.map(todo => {
+            if (todo.id === task.id) {
+                todo.task = taskText
+            }
+            return ''
+        })
+
+        setTodoList(todos)
+
+        onEdit(prev => !prev)
+
+    }
+
 
     return (
         <div className="input_edit">
             <input type="text" value={taskText} onChange={e => setTaskText(e.target.value)} />
-            <button className="btn-edit">Edit</button>
+            <button onClick={onClick} className="btn-edit">Edit</button>
         </div>
     )
 }
@@ -24,8 +44,6 @@ const Task = ({ todo }) => {
     const onChange = (task) => {
 
         const todos = JSON.parse(localStorage.getItem('todos'))
-        // const currentTodo = todos.filter(todo => todo.id === task.id)
-        // const newTask = { ...task, completed: !task.completed }
 
         todos.map(todo => {
             if (todo.id === task.id) {
@@ -55,7 +73,9 @@ const Task = ({ todo }) => {
                             todo.completed ? 'completed_checkbox' : ''
                         }
                         onChange={() => onChange(todo)}
-                        type="checkbox" checked={todo.completed} name="" id="" />
+                        type="checkbox"
+                        disabled={editTask}
+                        checked={todo.completed} name="" id="" />
                     <p className={
                         todo.completed ? 'completed_task' : ''
                     }>{todo.task}</p>
@@ -71,7 +91,7 @@ const Task = ({ todo }) => {
                 </div>
             </div>
             {
-                editTask && <EditTodo task={todo} />
+                editTask && <EditTodo onEdit={setEditTask} task={todo} />
             }
         </>
 
