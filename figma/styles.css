@@ -134,7 +134,7 @@ html {
 }
 .more {
     position: relative;
-    top: 35px;
+    top: 30px;
     left: 10px;
     font-size: 18px;
 }
@@ -144,7 +144,7 @@ html {
     height: 20px;
     width: 50px;
     position: relative;
-    top: 35px;
+    top: 30px;
     right: 30px;
     gap: 30px;
 
